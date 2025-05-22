@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+
+<header>
+    <section id="inicio">
+        <h1>Colección</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#salon">Salón</a>
+            <a href="#mesas de comedor">Mesas de Comedor</a>
+            <a href="#sillas">Sillas</a>
+            <a href="#sofas">Sofás</a>
+            <a href="#lamparas">Lámparas</a>
+        </nav>
+</header>
+
+<div class="format">
+    <section id="salon">
+        <h1 class="titles">Salón</h1>
+        <div class="block_column">
+            <div class="block1" id="block1" alt="Salón">
+                <img src="imagenes/salon/muebletv1.png" alt="Mueble de TV">
+                <h3 class="desc">Mueble de TV - Gorrión</h3>
+            </div>
+            <div class="block1" alt="Salón">
+                <img src="imagenes/salon/muebletv2.png" alt="Mueble de TV">
+                <h3 class="desc">Mueble de TV - Periquito</h3>
+            </div>
+            <div class="block2">
+                <img src="imagenes/salon/lamparapie1.png" alt="Lámpara de pie">
+                <h3 class="desc">Lámpara de pie - Luxo</h3>
+            </div>
+            <div class="block3">
+                <img src="imagenes/salon/sofa1.png" alt="Sofá">
+                <h3 class="desc">Sofá - Daniel</h3>
+             </div>
+            <div class="block4">
+                <img src="imagenes/salon/mueblepared1.png" alt="Mueble de pared">
+                <h3 class="desc">Muebles de Pared</h3>
+            </div>
+    </section>
+
+    <section id="comedor">
+        <h1 class="titles">Comedor</h1>
+        <div class="block_column">
+            <div class="block1">
+                <img src="imagenes/comedor/mesacomedor1.png" alt="Mesas de Comedor">
+                <h3 class="desc">Mesa de comedor</h3>
+            </div>
+            <div class="block2">
+                <img src="imagenes/comedor/silla1.png" alt="Mueble TV 3">
+                <h3 class="desc">Sillas</h3>
+            </div>
+    </section>
+
+    <section id="dormitorio">
+        <h1 class="titles">Dormitorio</h1>
+        <div class="block_column">
+            <div class="block1">
+                <img src="imagenes/dormitorio/cama1.png" alt="Cama1">
+                <h3 class="desc">Cama</h3>
+            </div>
+            <div class="block2">
+                <img src="imagenes/dormitorio/mesitanoche1.png" alt="Mueble TV 2">
+                <h3 class="desc">Mesita de Noche</h3>
+            </div>
+            <div class="block3">
+                <img src="imagenes/dormitorio/estanteria1.png" alt="Mueble TV 3">
+                <h3 class="desc">Estantería - Gurt</h3>
+            </div>
+            <div class="block4">
+                <img src="imagenes/dormitorio.png" alt="Mueble TV 3">
+                <h3 class="desc">yo</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="baño">
+        <h1 class="titles">Baño</h1>
+        <div class="block_column">
+            <div class="block1">
+                <img src="imagenes/baño/vater1.png" alt="Vater 1">
+                <h3 class="desc">Vater</h3>
+            </div>
+            <div class="block2">
+                <img src="imagenes/baño/lavabo1.png" alt="Lavabo 1">
+                <h3 class="desc">Lavabo</h3>
+            </div>
+            <div class="block3">
+                <img src="imagenes/baño/platoducha1.png" alt="Plato de ducha 1">
+                <h3 class="desc">Plato de ducha</h3>
+            </div>
+            <div class="block4">
+                <img src="imagenes/baño/estanteriabaño1.png" alt="Estantería de baño 1">
+                <h3 class="desc">Estantería de Baño</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="patio">
+        <h1 class="titles">Patio</h1>
+        <div class="block_column">
+            <div class="block1">
+                <img src="imagenes/patio/sillapatio1.png" alt="Silla de patio 1">
+                <h3 class="desc">Silla de patio</h3>
+            </div>
+            <div class="block2">
+                <img src="imagenes/patio/tumbona1.png" alt="Tumbona 1">
+                <h3 class="desc">Tumbona</h3>
+            </div>
+            <div class="block3">
+                <img src="imagenes/patio/pergola1.png" alt="Pérgola 1">
+                <h3 class="desc">Pérgolas</h3>
+            </div>
+            <div class="block4">
+                <img src="imagenes/patio/pergola1.png" alt="a">
+                <h3 class="desc">Pérgolas</h3>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+const bloques=document.querySelectorAll('.block1, .block2, .block3, .block4');
+
+    bloques.forEach(element=> {
+        element.addEventListener('mouseup', function() {
+            const img=element.querySelector('img');
+            const nombre=element.querySelector('.desc').innerText;
+            const colorBloque=getComputedStyle(element).backgroundColor;
+            
+            if(img) localStorage.setItem('compraMuebleImg', img.getAttribute('src'));
+            if(nombre) localStorage.setItem('compraMuebleNombre', nombre);
+            if(colorBloque) localStorage.setItem('compraMuebleBloqueColor', colorBloque);
+
+            window.location.href='compra.html';
+        });
+    });
+
+document.addEventListener('mouseover', function(event) {
+    if (event.target.matches('.block1, .block2, .block3, .block4')) {
+        event.target.style.cursor='pointer';
+    }
+});
+</script>
+</body>
+
+<footer>
+    <h4 class="footer">IQUEA. Nuestros Servicios:</h4><br>
+    <a href="manual.txt">Manual</a>
+    <a href="../imagenes/index.html">Imágenes</a>
+</footer>
+
+</html>
