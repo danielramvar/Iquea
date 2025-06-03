@@ -394,7 +394,6 @@ window.addEventListener('DOMContentLoaded', ponerInfo);
 
 
 const button=document.getElementById('button');
-const carrito=[];
 
 button.addEventListener('click', function() {
     alert('Producto añadido al carrito');

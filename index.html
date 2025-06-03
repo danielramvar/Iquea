@@ -133,20 +133,23 @@
 
 <script>
 const bloques=document.querySelectorAll('.block1, .block2, .block3, .block4');
+const arrayColeccion=Array.from(document.querySelectorAll('.desc'));
+const coleccion=arrayColeccion.map(item => item.innerText);
+console.log(coleccion);
 
-    bloques.forEach(element=> {
-        element.addEventListener('mouseup', function() {
-            const img=element.querySelector('img');
-            const nombre=element.querySelector('.desc').innerText;
-            const colorBloque=getComputedStyle(element).backgroundColor;
-            
-            if(img) localStorage.setItem('compraMuebleImg', img.getAttribute('src'));
-            if(nombre) localStorage.setItem('compraMuebleNombre', nombre);
-            if(colorBloque) localStorage.setItem('compraMuebleBloqueColor', colorBloque);
+bloques.forEach(element => {
+    element.addEventListener('mouseup', function() {
+        const img=element.querySelector('img');
+        const nombre=element.querySelector('.desc').innerText;
+        const colorBloque=getComputedStyle(element).backgroundColor;
+        
+        if(img) localStorage.setItem('compraMuebleImg', img.getAttribute('src'));
+        if(nombre) localStorage.setItem('compraMuebleNombre', nombre);
+        if(colorBloque) localStorage.setItem('compraMuebleBloqueColor', colorBloque);
 
-            window.location.href='compra.html';
-        });
+        window.location.href='compra.html';
     });
+});
 
 document.addEventListener('mouseover', function(event) {
     if (event.target.matches('.block1, .block2, .block3, .block4')) {
