@@ -133,9 +133,7 @@
 
 <script>
 const bloques=document.querySelectorAll('.block1, .block2, .block3, .block4');
-const arrayColeccion=Array.from(document.querySelectorAll('.desc'));
-const coleccion=arrayColeccion.map(item => item.innerText);
-console.log(coleccion);
+let coleccion=["Gorrión", "Periquito", "Luxo", "Daniel"];
 
 bloques.forEach(element => {
     element.addEventListener('mouseup', function() {

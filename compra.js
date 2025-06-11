@@ -395,9 +395,12 @@ window.addEventListener('DOMContentLoaded', ponerInfo);
 
 const button=document.getElementById('button');
 
+let carrito=[];
+
 button.addEventListener('click', function() {
+    
     alert('Producto añadido al carrito');
-    carrito.push("");
+    carrito.push();
 });
 
 document.addEventListener('mouseover', function(event) {
