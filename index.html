@@ -31,23 +31,23 @@
         <div class="block_column">
             <div class="block1" id="block1" alt="Salón">
                 <img src="imagenes/salon/muebletv1.png" alt="Mueble de TV">
-                <h3 class="desc">Mueble de TV - Gorrión</h3>
+                <h3 class="desc" alt="Gorrion">Mueble de TV - Gorrión</h3>
             </div>
             <div class="block1" alt="Salón">
                 <img src="imagenes/salon/muebletv2.png" alt="Mueble de TV">
-                <h3 class="desc">Mueble de TV - Periquito</h3>
+                <h3 class="desc" alt="Periquito">Mueble de TV - Periquito</h3>
             </div>
             <div class="block2">
                 <img src="imagenes/salon/lamparapie1.png" alt="Lámpara de pie">
-                <h3 class="desc">Lámpara de pie - Luxo</h3>
+                <h3 class="desc" alt="Luxo">Lámpara de pie - Luxo</h3>
             </div>
             <div class="block3">
                 <img src="imagenes/salon/sofa1.png" alt="Sofá">
-                <h3 class="desc">Sofá - Daniel</h3>
+                <h3 class="desc" alt="Daniel">Sofá - Daniel</h3>
              </div>
             <div class="block4">
                 <img src="imagenes/salon/mueblepared1.png" alt="Mueble de pared">
-                <h3 class="desc">Muebles de Pared</h3>
+                <h3 class="desc" alt="a">Muebles de Pared</h3>
             </div>
     </section>
 
@@ -56,11 +56,11 @@
         <div class="block_column">
             <div class="block1">
                 <img src="imagenes/comedor/mesacomedor1.png" alt="Mesas de Comedor">
-                <h3 class="desc">Mesa de comedor</h3>
+                <h3 class="desc" alt="a">Mesa de comedor</h3>
             </div>
             <div class="block2">
                 <img src="imagenes/comedor/silla1.png" alt="Mueble TV 3">
-                <h3 class="desc">Sillas</h3>
+                <h3 class="desc" alt="a">Sillas</h3>
             </div>
     </section>
 
@@ -69,19 +69,19 @@
         <div class="block_column">
             <div class="block1">
                 <img src="imagenes/dormitorio/cama1.png" alt="Cama1">
-                <h3 class="desc">Cama</h3>
+                <h3 class="desc" alt="a">Cama</h3>
             </div>
             <div class="block2">
                 <img src="imagenes/dormitorio/mesitanoche1.png" alt="Mueble TV 2">
-                <h3 class="desc">Mesita de Noche</h3>
+                <h3 class="desc" alt="a">Mesita de Noche</h3>
             </div>
             <div class="block3">
                 <img src="imagenes/dormitorio/estanteria1.png" alt="Mueble TV 3">
-                <h3 class="desc">Estantería - Gurt</h3>
+                <h3 class="desc" alt="Gurt">Estantería - Gurt</h3>
             </div>
             <div class="block4">
                 <img src="imagenes/dormitorio.png" alt="Mueble TV 3">
-                <h3 class="desc">yo</h3>
+                <h3 class="desc" alt="a">yo</h3>
             </div>
         </div>
     </section>
@@ -91,19 +91,19 @@
         <div class="block_column">
             <div class="block1">
                 <img src="imagenes/baño/vater1.png" alt="Vater 1">
-                <h3 class="desc">Vater</h3>
+                <h3 class="desc" alt="a">Vater</h3>
             </div>
             <div class="block2">
                 <img src="imagenes/baño/lavabo1.png" alt="Lavabo 1">
-                <h3 class="desc">Lavabo</h3>
+                <h3 class="desc" alt="a">Lavabo</h3>
             </div>
             <div class="block3">
                 <img src="imagenes/baño/platoducha1.png" alt="Plato de ducha 1">
-                <h3 class="desc">Plato de ducha</h3>
+                <h3 class="desc" alt="a">Plato de ducha</h3>
             </div>
             <div class="block4">
                 <img src="imagenes/baño/estanteriabaño1.png" alt="Estantería de baño 1">
-                <h3 class="desc">Estantería de Baño</h3>
+                <h3 class="desc" alt="a">Estantería de Baño</h3>
             </div>
         </div>
     </section>
@@ -113,19 +113,19 @@
         <div class="block_column">
             <div class="block1">
                 <img src="imagenes/patio/muebleutensilios1.png" alt="Mueble de utensilios">
-                <h3 class="desc">Mueble de utensilios</h3>
+                <h3 class="desc" alt="a">Mueble de utensilios</h3>
             </div>
             <div class="block2">
                 <img src="imagenes/patio/mueblevajillas1.png" alt="Mueble de vajillas">
-                <h3 class="desc">Mueble de vajillas</h3>
+                <h3 class="desc" alt="a">Mueble de vajillas</h3>
             </div>
             <div class="block3">
                 <img src="imagenes/patio/mueblecondimentos1.png" alt="Mueble de condimentos">
-                <h3 class="desc">Mueble de condimentos</h3>
+                <h3 class="desc" alt="a">Mueble de condimentos</h3>
             </div>
             <div class="block4">
                 <img src="imagenes/patio/despensa1.png" alt="Despensa">
-                <h3 class="desc">Despensa</h3>
+                <h3 class="desc" alt="a">Despensa</h3>
             </div>
         </div>
     </section>
@@ -133,17 +133,24 @@
 
 <script>
 const bloques=document.querySelectorAll('.block1, .block2, .block3, .block4');
-let coleccion=["Gorrión", "Periquito", "Luxo", "Daniel"];
+let coleccion=["Gorrión", "Periquito", "Luxo", "Daniel", "Gurt"]; //creo una variable que guarde toda la colección de muebles que tenemos en Iquea
+console.log(coleccion);
+
+localStorage.setItem('coleccion', coleccion);
 
 bloques.forEach(element => {
-    element.addEventListener('mouseup', function() {
+    element.addEventListener('click', function() {
         const img=element.querySelector('img');
         const nombre=element.querySelector('.desc').innerText;
         const colorBloque=getComputedStyle(element).backgroundColor;
+        const altNombre=element.querySelector('.desc').getAttribute('alt');
+        console.log('altNombre guardado:', altNombre);
+
         
         if(img) localStorage.setItem('compraMuebleImg', img.getAttribute('src'));
         if(nombre) localStorage.setItem('compraMuebleNombre', nombre);
         if(colorBloque) localStorage.setItem('compraMuebleBloqueColor', colorBloque);
+        if(altNombre) localStorage.setItem('altNombre', altNombre);
 
         window.location.href='compra.html';
     });

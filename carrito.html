@@ -7,10 +7,12 @@
 </head>
 <body>
     <script>
-        
         let dineroCarrito=0;
+        let coleccion=localStorage.getItem('coleccion');
+        if(coleccion) coleccion=coleccion.split(',');
+        console.log(coleccion);
         
-        
+
     </script>
 </body>
 </html>

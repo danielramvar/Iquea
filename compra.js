@@ -1,13 +1,14 @@
+let img=localStorage.getItem('compraMuebleImg');
+let nombre=localStorage.getItem('compraMuebleNombre');
+let colorBloque=localStorage.getItem('compraMuebleBloqueColor');
+
 function ponerMueble() {
-    const img=localStorage.getItem('compraMuebleImg');
-    const nombre=localStorage.getItem('compraMuebleNombre');
-    const colorBloque=localStorage.getItem('compraMuebleBloqueColor');
 
     const borderSelectorColoresMarron=document.getElementById('color1'); /*marrón*/
     const borderSelectorColoresBlanco=document.getElementById('color2'); /*blanco*/
     const borderSelectorColoresNegro=document.getElementById('color3'); /*negro*/
 
-    if(img)  document.getElementById('img').src=img;
+    if(img) document.getElementById('img').src=img;
     if(nombre) document.getElementById('nombre').innerText=nombre;
     if(colorBloque) document.querySelector('.block').style.backgroundColor=colorBloque;
     if(colorBloque) document.getElementById('button').style.color=colorBloque;
@@ -395,12 +396,26 @@ window.addEventListener('DOMContentLoaded', ponerInfo);
 
 const button=document.getElementById('button');
 
-let carrito=[];
+let carrito = localStorage.getItem('carrito');
+if(carrito){
+    carrito=carrito.split(',');
+}else{
+    carrito=[];
+}
+
+let coleccion=localStorage.getItem('coleccion');
+if(coleccion) coleccion=coleccion.split(',');
+const altNombre=localStorage.getItem('altNombre');
+
 
 button.addEventListener('click', function() {
-    
     alert('Producto añadido al carrito');
-    carrito.push();
+    if(altNombre) carrito.push(altNombre);
+
+    localStorage.setItem('carrito', carrito.join(','));
+
+    console.log(coleccion);
+    console.log(carrito);
 });
 
 document.addEventListener('mouseover', function(event) {
