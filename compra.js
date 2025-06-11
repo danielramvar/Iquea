@@ -396,7 +396,7 @@ window.addEventListener('DOMContentLoaded', ponerInfo);
 
 const button=document.getElementById('button');
 
-let carrito = localStorage.getItem('carrito');
+let carrito=localStorage.getItem('carrito');
 if(carrito){
     carrito=carrito.split(',');
 }else{
