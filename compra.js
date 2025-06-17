@@ -1,6 +1,7 @@
-let img=localStorage.getItem('compraMuebleImg');
-let nombre=localStorage.getItem('compraMuebleNombre');
-let colorBloque=localStorage.getItem('compraMuebleBloqueColor');
+let compraMueble=JSON.parse(localStorage.getItem('compraMueble')) || {};
+let img=compraMueble.img;
+let nombre=compraMueble.nombre;
+let colorBloque=compraMueble.colorBloque;
 
 function ponerMueble() {
 
@@ -15,7 +16,7 @@ function ponerMueble() {
 
     const selectorColores=document.querySelectorAll('#color1, #color2, #color3');
     selectorColores.forEach((element)=>{
-        element.addEventListener('mouseup', function(){
+        element.addEventListener('click', function(){
             const color=window.getComputedStyle(element).backgroundColor;
 
             switch(img) {
@@ -395,31 +396,20 @@ window.addEventListener('DOMContentLoaded', ponerInfo);
 
 
 const button=document.getElementById('button');
-
-let carrito=localStorage.getItem('carrito');
-if(carrito){
-    carrito=carrito.split(',');
-}else{
-    carrito=[];
-}
-
-let coleccion=localStorage.getItem('coleccion');
-if(coleccion) coleccion=coleccion.split(',');
-const altNombre=localStorage.getItem('altNombre');
-
+let carrito=JSON.parse(localStorage.getItem('carrito')) || [];
 
 button.addEventListener('click', function() {
     alert('Producto añadido al carrito');
-    if(altNombre) carrito.push(altNombre);
+    const mueble=JSON.parse(localStorage.getItem('compraMueble'));
+    if(mueble) carrito.push(mueble);
+    
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 
-    localStorage.setItem('carrito', carrito.join(','));
-
-    console.log(coleccion);
     console.log(carrito);
 });
 
 document.addEventListener('mouseover', function(event) {
-    if (event.target.matches('#button')) {
+    if(event.target.matches('#button')){
         event.target.style.cursor='pointer';
     }
 });

@@ -135,12 +135,8 @@
 
 <script>
 const bloques=document.querySelectorAll('.block1, .block2, .block3, .block4');
-let coleccion=["Gorrión", "Periquito", "Luxo", "Daniel", "Gurt"]; //creo una variable que guarde toda la colección de muebles que tenemos en Iquea
-console.log(coleccion);
 
-localStorage.setItem('coleccion', coleccion);
-
-bloques.forEach(element => {
+bloques.forEach(function(element){
     element.addEventListener('click', function() {
         const img=element.querySelector('img');
         const nombre=element.querySelector('.desc').innerText;
@@ -148,12 +144,14 @@ bloques.forEach(element => {
         const altNombre=element.querySelector('.desc').getAttribute('alt');
         console.log('altNombre guardado:', altNombre);
 
-        
-        if(img) localStorage.setItem('compraMuebleImg', img.getAttribute('src'));
-        if(nombre) localStorage.setItem('compraMuebleNombre', nombre);
-        if(colorBloque) localStorage.setItem('compraMuebleBloqueColor', colorBloque);
-        if(altNombre) localStorage.setItem('altNombre', altNombre);
+        const compraMueble={
+            img: img.getAttribute('src'),
+            nombre: nombre,
+            colorBloque: colorBloque,
+            altNombre: altNombre
+        };
 
+        localStorage.setItem('compraMueble', JSON.stringify(compraMueble));
         window.location.href='compra.html';
     });
 });

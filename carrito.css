@@ -1,0 +1,46 @@
+header, footer {
+    background-color: #2f547cce; /* marrón a96035ce, azul marino 2f547cce */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 30px;
+    font-size: 1.5em;
+}
+
+body {
+    background-color: rgba(47, 84, 124, 0.8);
+    font-family: Yrsa;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    margin: 30px;
+    text-decoration: none;
+}
+
+.format {
+    margin: auto;
+    padding: 10px;
+}
+
+.titles {
+    color: #fff;
+    font-size: 5em;
+    margin: 0% 5%;
+}
+
+.mueble {
+    width: 100%;
+    height: 85%;
+    border-radius: 15px;
+    object-fit: fill;
+}
+
+.desc {
+    font-size: 1.7em;
+    color: #ffdabf; /* ffc297 marrón claro */
+    margin: 20px 0;
+    text-align: center;
+    justify-content: center;
+}

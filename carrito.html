@@ -4,13 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
+    <link rel="stylesheet" href="carrito.css">
 </head>
+
+<header>
+    <nav>
+        <a href=index.html>Página Principal</a>
+    </nav>
+</header>
 <body>
+    <div class="format">
+        <section id="carrito">
+            <h1 class="titles">Carrito</h1>
+            <div class="block_row">
+            <!-- Se crearán <div> en base al número de elementos que haya en el carrito -->               
+            </div>
+        </section>
+    </div>
+
     <script>
         let dineroCarrito=0;
-        let carrito=localStorage.getItem('carrito');
-        if(carrito) carrito=carrito.split(',');
         
+        let carrito=carrito+(JSON.parse(localStorage.getItem('compraMueble')));
+        let aviso=document.createElement('p');
+
+        if(!carrito) aviso.textContent='No hay ningún mueble en el carrito';
+
+        for(let i=0; i<carrito.length; i++){
+            let div=document.createElement('div');
+        }      
     </script>
 </body>
 </html>
