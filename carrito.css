@@ -19,6 +19,18 @@ nav a {
     text-decoration: none;
 }
 
+.block {
+    display: flex;
+    width: auto;
+    margin: 2% 2% 2% 2%;
+    padding: 1.5%;
+    border: 0px solid #000000; /*inutilzado*/
+    border-radius: 15px;
+    background-color: rgb(147, 75, 7); /* #934b07 */
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 .format {
     margin: auto;
     padding: 10px;
