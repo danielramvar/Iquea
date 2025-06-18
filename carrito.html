@@ -23,16 +23,25 @@
     </div>
 
     <script>
-        let dineroCarrito=0;
-        
-        let carrito=carrito+(JSON.parse(localStorage.getItem('compraMueble')));
+        let carrito=JSON.parse(localStorage.getItem('carrito'));
+        let compraMueble=JSON.parse(localStorage.getItem('compraMueble'));
         let aviso=document.createElement('p');
 
-        if(!carrito) aviso.textContent='No hay ningún mueble en el carrito';
-
-        for(let i=0; i<carrito.length; i++){
+        for(let i=0; i<carrito.length; i++) {
+            let divColumna=document.querySelector('.block_row');
             let div=document.createElement('div');
-        }      
+            div.innerHTML=`
+                <div class=block>
+                    <img src=${carrito[i].img}>
+                    <div class=info>
+                        <h1 id="nombre">${carrito[i].nombre}</h1> 
+                        <h1 class="price"></h1>
+                        <div id="button">Añadir al carrito</div>
+                    </div>
+                </div>
+                `;
+
+        }
     </script>
 </body>
 </html>

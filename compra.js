@@ -1,10 +1,10 @@
-let compraMueble=JSON.parse(localStorage.getItem('compraMueble')) || {};
+let compraMueble=JSON.parse(localStorage.getItem('compraMueble'));
 let img=compraMueble.img;
 let nombre=compraMueble.nombre;
 let colorBloque=compraMueble.colorBloque;
+let precio;
 
 function ponerMueble() {
-
     const borderSelectorColoresMarron=document.getElementById('color1'); /*marrón*/
     const borderSelectorColoresBlanco=document.getElementById('color2'); /*blanco*/
     const borderSelectorColoresNegro=document.getElementById('color3'); /*negro*/
@@ -22,7 +22,7 @@ function ponerMueble() {
             switch(img) {
                 case 'imagenes/salon/muebletv1.png': /*gorrión*/
                     if(color==="rgb(114, 57, 0)"){ /*si es marrón*/
-                        document.getElementById('img').src='imagenes/salon/muebletv1.png';
+                        document.getElementById('img').src='imagenes/salon/muebletv1marron.png';
                         borderSelectorColoresMarron.style.border='solid 5px rgb(0, 255, 0)';
                         borderSelectorColoresBlanco.style.border='solid 0px rgb(0, 255, 0)';
                         borderSelectorColoresNegro.style.border='solid 0px rgb(0, 255, 0)';
@@ -335,19 +335,23 @@ function ponerMueble() {
 }
 
 function ponerInfo(){
-    const img=localStorage.getItem('compraMuebleImg');
+    const img=compraMueble.img;
     switch(img){
         case 'imagenes/salon/muebletv1.png':
             document.querySelector('.price').innerText='1₧';
+            precio=1;
             break;
         case 'imagenes/salon/muebletv2.png':
             document.querySelector('.price').innerText='2₧';
+            precio=2;
             break;
         case 'imagenes/salon/lamparapie1.png':
             document.querySelector('.price').innerText='8300₧';
+            precio=3;
             break;
         case 'imagenes/salon/sofa1.png':
             document.querySelector('.price').innerText='8300₧';
+            precio=4;
             break;
         case 'imagenes/salon/mueblepared1.png':
             document.querySelector('.price').innerText='8300₧';
@@ -390,22 +394,20 @@ function ponerInfo(){
             break;
     }
 }
+localStorage.setItem('compraMueble', JSON.stringify(compraMueble));
 
 window.addEventListener('DOMContentLoaded', ponerMueble);
 window.addEventListener('DOMContentLoaded', ponerInfo);
 
-
 const button=document.getElementById('button');
 let carrito=JSON.parse(localStorage.getItem('carrito')) || [];
 
-button.addEventListener('click', function() {
+button.addEventListener('click', function(){
     alert('Producto añadido al carrito');
-    const mueble=JSON.parse(localStorage.getItem('compraMueble'));
-    if(mueble) carrito.push(mueble);
-    
-    localStorage.setItem('carrito', JSON.stringify(carrito));
+    compraMueble.precio=precio;
+    if(compraMueble) carrito.push(compraMueble);
 
-    console.log(carrito);
+    localStorage.setItem('carrito', JSON.stringify(carrito)); 
 });
 
 document.addEventListener('mouseover', function(event) {
