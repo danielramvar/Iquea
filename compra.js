@@ -277,7 +277,7 @@ function ponerMueble() {
                     break;
                 case 'imagenes/patio/sillapatio1.png':
                     if(color==="rgb(114, 57, 0)"){ /*si es marrón*/
-                        document.getElementById('img').src='imagenes/patio/sillapatio1.png';
+                        document.getElementById('img').src='imagenes/cocina/muebleutensilios1.png';
                         borderSelectorColoresMarron.style.border='solid 5px rgb(0, 255, 0)';
                         borderSelectorColoresBlanco.style.border='solid 0px rgb(0, 255, 0)';
                         borderSelectorColoresNegro.style.border='solid 0px rgb(0, 255, 0)';
@@ -324,6 +324,24 @@ function ponerMueble() {
                         borderSelectorColoresNegro.style.border='solid 5px rgb(0, 255, 0)';
                     }else if(color==="rgb(255, 255, 255)"){ /*si es blanco*/
                         document.getElementById('img').src='imagenes/patio/pergola1blanco.png';
+                        borderSelectorColoresMarron.style.border='solid 0px rgb(0, 255, 0)';
+                        borderSelectorColoresBlanco.style.border='solid 5px rgb(0, 255, 0)';
+                        borderSelectorColoresNegro.style.border='solid 0px rgb(0, 255, 0)';
+                    }
+                    break;
+                case 'imagenes/dormitorio/mesitanoche1.png':
+                    if(color==="rgb(114, 57, 0)"){ /*si es marrón*/
+                        document.getElementById('img').src='imagenes/dormitorio/mesitanoche1.png';
+                        borderSelectorColoresMarron.style.border='solid 5px rgb(0, 255, 0)';
+                        borderSelectorColoresBlanco.style.border='solid 0px rgb(0, 255, 0)';
+                        borderSelectorColoresNegro.style.border='solid 0px rgb(0, 255, 0)';
+                    }else if(color==="rgb(0, 0, 0)"){ /*si es negro*/
+                        document.getElementById('img').src='imagenes/dormitorio/mesitanoche1negro.png';
+                        borderSelectorColoresMarron.style.border='solid 0px rgb(0, 255, 0)';
+                        borderSelectorColoresBlanco.style.border='solid 0px rgb(0, 255, 0)';
+                        borderSelectorColoresNegro.style.border='solid 5px rgb(0, 255, 0)';
+                    }else if(color==="rgb(255, 255, 255)"){ /*si es blanco*/
+                        document.getElementById('img').src='imagenes/dormitorio/mesitanoche1blanco.png';
                         borderSelectorColoresMarron.style.border='solid 0px rgb(0, 255, 0)';
                         borderSelectorColoresBlanco.style.border='solid 5px rgb(0, 255, 0)';
                         borderSelectorColoresNegro.style.border='solid 0px rgb(0, 255, 0)';
