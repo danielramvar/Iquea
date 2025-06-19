@@ -16,37 +16,63 @@
     <section id="carrito">
         <h1 class="titles">Carrito</h1>
         <div class="block_row">
-        <!-- Se crearán <div> en base al número de elementos que haya en el carrito -->               
+        <!-- Se crearán <div> en base al número de elementos que haya en el carrito -->
+        </div>
+        <div id="precioTotal"></div>
     </section>
 
     <script>
-        let carrito=JSON.parse(localStorage.getItem('carrito'));
-        let compraMueble=JSON.parse(localStorage.getItem('compraMueble'));
+        let carrito=JSON.parse(localStorage.getItem('carrito')) || [];
         let aviso=document.createElement('p');
         let precioCarrito=0;
+        let divColumna=document.querySelector('.block_row');
 
-        for(let i=0; i<carrito.length; i++) {
-            precioCarrito+=carrito[i].precio;
-            let divColumna=document.querySelector('.block_row');
-            let div=document.createElement('div');
-            div.innerHTML=`
-            <div class=format>
-                <div id="imagen_y_colores">
-                    <div class=block>
-                        <img src=${carrito[i].img}>
-                        <div class=info>
-                            <div class="text">
-                                <h1 id="nombre">${carrito[i].nombre}</h1> 
-                                <h1 class="price">${carrito[i].price}</h1>
-                                <div id="button">Eliminar del carrito</div>
-                            </div>
+        if (carrito==[]){
+            aviso.innerText='El carrito está vacío.';
+            divColumna.appendChild(aviso);
+        }else{
+            for (let i=0; i<carrito.length; i++) {
+                precioCarrito+=carrito[i].precio || 0;
+                let div=document.createElement('div');
+                div.innerHTML=`
+                <div class="block">
+                    <div id="imagen_y_colores">
+                        <img src="${carrito[i].img}">
+                    </div>
+                    <div class="info">
+                        <div class="text">
+                            <h1 id="nombre">${carrito[i].nombre}</h1>
+                            <h1 class="price">${carrito[i].precio+'₧'}</h1>
+                            <div class="button" onclick="eliminarDelCarrito(${i})">Eliminar</div>
                         </div>
                     </div>
                 </div>
-            </div>
-            `;
-            divColumna.appendChild(div);
+                `;
+                divColumna.appendChild(div);
+            }
         }
+        document.getElementById('precioTotal').innerText='Total Carrito: '+precioCarrito+'₧';
+
+        window.eliminarDelCarrito=function(indice) {
+            var carritoGuardado=localStorage.getItem('carrito');
+            if(carritoGuardado){
+                var carritoArray=JSON.parse(carritoGuardado);
+                var nuevoCarrito=[];
+                for (var j=0; j<carritoArray.length; j++) {
+                    if (j!=indice) {
+                        nuevoCarrito.push(carritoArray[j]);
+                    }
+                }
+                localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
+                document.location.href = document.location.href;
+            }
+        }
+
+        document.addEventListener('mouseover', function(event) {
+            if(event.target.matches('.button')){
+                event.target.style.cursor='pointer';
+            }
+        });
     </script>
 </body>
 </html>
