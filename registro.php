@@ -17,27 +17,5 @@ if (isset($_REQUEST['username'])) {
               <h3>Te has registrado correctamente.</h3>
               <br/>Haz clic aquí para <a href='login.php'>Iniciar Sesión</a></div>";
     }
-} else {
-?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <title>Registro</title>
-    <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-    <div class="form-container">
-        <h2>Registro de Usuario</h2>
-        <form name="registration" action="" method="post">
-            <input type="text" name="username" placeholder="Nombre de usuario" required />
-            <input type="password" name="password" placeholder="Contraseña" required />
-            <input type="submit" name="submit" value="Registrarse" />
-        </form>
-        <p>¿Ya tienes una cuenta? <a href="login.php">Inicia Sesión Aquí</a></p>
-    </div>
-</body>
-</html>
-<?php
-}
+} 
 ?>
