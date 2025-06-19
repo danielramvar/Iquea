@@ -364,8 +364,7 @@ function ponerMueble() {
                         borderSelectorColoresBlanco.style.border='solid 5px rgb(0, 255, 0)';
                         borderSelectorColoresNegro.style.border='solid 0px rgb(0, 255, 0)';
                     }
-                    break;
-                default: 
+                    break; 
             }
         })
     });
@@ -374,60 +373,77 @@ function ponerMueble() {
 function ponerInfo(){
     switch(img){
         case 'imagenes/salon/muebletv1.png':
-            document.querySelector('.price').innerText='1₧';
-            precio=1;
+            document.querySelector('.price').innerText='83.100₧';
+            precio=83100;
             break;
         case 'imagenes/salon/muebletv2.png':
-            document.querySelector('.price').innerText='2₧';
-            precio=2;
+            document.querySelector('.price').innerText='74.800₧';
+            precio=74800;
             break;
         case 'imagenes/salon/lamparapie1.png':
-            document.querySelector('.price').innerText='8300₧';
-            precio=3;
+            document.querySelector('.price').innerText='19.900₧';
+            precio=19900;
             break;
         case 'imagenes/salon/sofa1.png':
-            document.querySelector('.price').innerText='8300₧';
-            precio=4;
+            document.querySelector('.price').innerText='133.100₧';
+            precio=133100;
             break;
         case 'imagenes/salon/mueblepared1.png':
-            document.querySelector('.price').innerText='8300₧';
+            document.querySelector('.price').innerText='29.900₧';
+            precio=29900;
             break;
         case 'imagenes/comedor/mesacomedor1.png':
-            document.querySelector('.price').innerText='8300₧';
+            document.querySelector('.price').innerText='108.100₧';
+            precio=108100;
             break;
         case 'imagenes/comedor/silla1.png':
-            document.querySelector('.price').innerText='8300₧';
+            document.querySelector('.price').innerText='14.900₧';
+            precio=14900;
             break;
         case 'imagenes/dormitorio/cama1.png':
-            document.querySelector('.price').innerText='8300₧';
+            document.querySelector('.price').innerText='116.400₧';
+            precio=116400;
             break;
         case 'imagenes/dormitorio/mesitanoche1.png':
-            document.querySelector('.price').innerText='8300₧';
+            document.querySelector('.price').innerText='24.900₧';
+            precio=24900;
             break;
         case 'imagenes/dormitorio/estanteria1.png':
-            document.querySelector('.price').innerText='8300₧';
+            document.querySelector('.price').innerText='166.300₧';
+            precio=166300;
             break;
+        /*case 'imagenes/dormitorio/'*/
         case 'imagenes/baño/vater1.png':
-            document.querySelector('.price').innerText='8300₧';
+            document.querySelector('.price').innerText='46.500₧';
+            precio=46500;
             break;
         case 'imagenes/baño/lavabo1.png':
-            document.querySelector('.price').innerText='8300₧';
+            document.querySelector('.price').innerText='41.500₧';
+            precio=41500;
             break;
         case 'imagenes/baño/platoducha1.png':
-            document.querySelector('.price').innerText='8300₧';
+            document.querySelector('.price').innerText='58.200₧';
+            precio=58200;
             break;
         case 'imagenes/baño/estanteriabaño1.png':
-            document.querySelector('.price').innerText='8300₧';
+            document.querySelector('.price').innerText='102.400';
+            precio=102400;
             break;
-        case 'imagenes/patio/sillapatio1.png':
-            document.querySelector('.price').innerText='8300₧';
+        case 'imagenes/cocina/muebleutensilios1.png':
+            document.querySelector('.price').innerText='124.700₧';
+            precio=124700;
             break;
-        case 'imagenes/patio/tumbona1.png':
-            document.querySelector('.price').innerText='8300₧';
+        case 'imagenes/cocina/mueblevajillas1.png':
+            document.querySelector('.price').innerText='158.000₧';
+            precio=158000;
             break;
-        case 'imagenes/patio/pergola1.png':
-            document.querySelector('.price').innerText='8300₧';
+        case 'imagenes/cocina/mueblecondimentos1.png':
+            document.querySelector('.price').innerText='49.900₧';
+            precio=49900;
             break;
+        case 'imagenes/cocina/despensa1.png':
+            document.querySelector('.price').innerText='59.400₧'
+            precio=59400;
         default: document.querySelector('.price').innerText='Selecciona un color';
     }
 }
