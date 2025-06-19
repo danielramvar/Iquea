@@ -62,12 +62,12 @@
                 var carritoArray=JSON.parse(carritoGuardado);
                 var nuevoCarrito=[];
                 for (var j=0; j<carritoArray.length; j++) {
-                    if (j!=indice) {
+                    if (j!=indice){
                         nuevoCarrito.push(carritoArray[j]);
                     }
                 }
                 localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
-                document.location.href = document.location.href;
+                document.location.href=document.location.href;
             }
         }
 
@@ -79,7 +79,7 @@
 
         let botonComprar=document.getElementById('botonComprar');
         botonComprar.addEventListener('click', function(){
-            alert('Pedido realizado.\nTu pedido llega en 10 minutos.');
+            alert('Pedido realizado.\nTu pedido llega en 10 minutos.\n\nTotal gastado: '+precioCarrito+'₧');
         });
     </script>
 </body>
