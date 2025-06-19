@@ -234,6 +234,43 @@ nav a {
     justify-content: center;
 }
 
-#precioTotal{
-    left: 100%;
+#precioTotal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    margin: 2% 2% 2% 2%;
+    padding: 1.5%;
+    border-radius: 15px;
+    background-color: rgb(0, 87, 30);
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+#totalCarrito {
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    display: block;
+}
+
+#botonComprar {
+    margin-left: 20px;
+    padding: 10px 30px;
+    background: #fff;
+    color: #00571e;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    font-weight: bold;
+    height: auto;
+    left: unset;
+    align-self: center;
 }

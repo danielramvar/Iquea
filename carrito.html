@@ -18,7 +18,10 @@
         <div class="block_row">
         <!-- Se crearán <div> en base al número de elementos que haya en el carrito -->
         </div>
-        <div id="precioTotal"></div>
+        <div id="precioTotal">
+            <span id="totalCarrito">Total Carrito: 0₧</span>
+            <button id="botonComprar">Comprar</button>
+        </div>
     </section>
 
     <script>
@@ -51,7 +54,7 @@
                 divColumna.appendChild(div);
             }
         }
-        document.getElementById('precioTotal').innerText='Total Carrito: '+precioCarrito+'₧';
+        document.getElementById('totalCarrito').innerText='Total Carrito: '+precioCarrito+'₧';
 
         window.eliminarDelCarrito=function(indice) {
             var carritoGuardado=localStorage.getItem('carrito');
@@ -72,6 +75,11 @@
             if(event.target.matches('.button')){
                 event.target.style.cursor='pointer';
             }
+        });
+
+        let botonComprar=document.getElementById('botonComprar');
+        botonComprar.addEventListener('click', function(){
+            alert('Pedido realizado.\nTu pedido llega en 10 minutos.');
         });
     </script>
 </body>
