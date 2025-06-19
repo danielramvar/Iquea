@@ -13,34 +13,39 @@
     </nav>
 </header>
 <body>
-    <div class="format">
-        <section id="carrito">
-            <h1 class="titles">Carrito</h1>
-            <div class="block_row">
-            <!-- Se crearán <div> en base al número de elementos que haya en el carrito -->               
-            </div>
-        </section>
-    </div>
+    <section id="carrito">
+        <h1 class="titles">Carrito</h1>
+        <div class="block_row">
+        <!-- Se crearán <div> en base al número de elementos que haya en el carrito -->               
+    </section>
 
     <script>
         let carrito=JSON.parse(localStorage.getItem('carrito'));
         let compraMueble=JSON.parse(localStorage.getItem('compraMueble'));
         let aviso=document.createElement('p');
+        let precioCarrito=0;
 
         for(let i=0; i<carrito.length; i++) {
+            precioCarrito+=carrito[i].precio;
             let divColumna=document.querySelector('.block_row');
             let div=document.createElement('div');
             div.innerHTML=`
-                <div class=block>
-                    <img src=${carrito[i].img}>
-                    <div class=info>
-                        <h1 id="nombre">${carrito[i].nombre}</h1> 
-                        <h1 class="price"></h1>
-                        <div id="button">Añadir al carrito</div>
+            <div class=format>
+                <div id="imagen_y_colores">
+                    <div class=block>
+                        <img src=${carrito[i].img}>
+                        <div class=info>
+                            <div class="text">
+                                <h1 id="nombre">${carrito[i].nombre}</h1> 
+                                <h1 class="price">${carrito[i].price}</h1>
+                                <div id="button">Eliminar del carrito</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                `;
-
+            </div>
+            `;
+            divColumna.appendChild(div);
         }
     </script>
 </body>
