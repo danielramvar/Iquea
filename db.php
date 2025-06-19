@@ -3,7 +3,7 @@
 $servidor="localhost";
 $usuario="root";
 $contrasena="";
-$basededatos="tu_base_de_datos";
+$basededatos="iquea";
 
 $conexion=mysqli_connect($servidor, $usuario, $contrasena, $basededatos);
 

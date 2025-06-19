@@ -27,4 +27,5 @@ if(isset($_POST['username'])) {
               <h3>Nombre de usuario/contraseña incorrectos.</h3>
               <br/>Haz clic aquí para <a href='login.php'>intentar de nuevo</a>.</div>";
     }
+    }
 ?>
