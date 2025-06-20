@@ -27,8 +27,6 @@ function ponerMueble() {
                         borderSelectorColoresMarron.style.border='solid 5px rgb(0, 255, 0)';
                         borderSelectorColoresBlanco.style.border='solid 0px rgb(0, 255, 0)';
                         borderSelectorColoresNegro.style.border='solid 0px rgb(0, 255, 0)';
-                        document.getElementById('desc').innerText="Textura tan perfecta como las criaturas que su nombre porta";
-
                     }else if(color==="rgb(0, 0, 0)"){ /*si es negro*/
                         document.getElementById('img').src='imagenes/salon/muebletv1negro.png';
                         borderSelectorColoresMarron.style.border='solid 0px rgb(0, 255, 0)';
@@ -444,6 +442,7 @@ function ponerInfo(){
         case 'imagenes/cocina/despensa1.png':
             document.querySelector('.price').innerText='59.400₧'
             precio=59400;
+            break;
         default: document.querySelector('.price').innerText='Selecciona un color';
     }
 }
