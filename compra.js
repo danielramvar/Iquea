@@ -75,8 +75,8 @@ function ponerMueble() {
                         borderSelectorColoresNegro.style.border='solid 5px rgb(0, 255, 0)';
                     }else if(color==="rgb(255, 255, 255)"){ /*si es blanco*/
                         document.getElementById('img').src='imagenes/salon/lamparapie1blanco.png';
-                        borderSelectorColoresMarron.style.border='solid 5px rgb(0, 255, 0)';
-                        borderSelectorColoresBlanco.style.border='solid 0px rgb(0, 255, 0)';
+                        borderSelectorColoresMarron.style.border='solid 0px rgb(0, 255, 0)';
+                        borderSelectorColoresBlanco.style.border='solid 5px rgb(0, 255, 0)';
                         borderSelectorColoresNegro.style.border='solid 0px rgb(0, 255, 0)';
                     }
                     break;
@@ -270,20 +270,20 @@ function ponerMueble() {
                         borderSelectorColoresNegro.style.border='solid 0px rgb(0, 255, 0)';
                     }
                     break;
-                case 'imagenes/baño/estanteriabaño1.png': /*pista de hielo*/
+                case 'imagenes/baño/estanteriabano1.png': /*pista de hielo*/
                 document.getElementById('nombre').innerText="Estantería de baño - Pista de Hielo";
                     if(color==="rgb(114, 57, 0)"){ /*si es marrón*/
-                        document.getElementById('img').src='imagenes/baño/estanteriabaño1.png';
+                        document.getElementById('img').src='imagenes/baño/estanteriabano1.png';
                         borderSelectorColoresMarron.style.border='solid 5px rgb(0, 255, 0)';
                         borderSelectorColoresBlanco.style.border='solid 0px rgb(0, 255, 0)';
                         borderSelectorColoresNegro.style.border='solid 0px rgb(0, 255, 0)';
                     }else if(color==="rgb(0, 0, 0)"){ /*si es negro*/
-                        document.getElementById('img').src='imagenes/baño/estanteriabaño1negro.png';
+                        document.getElementById('img').src='imagenes/baño/estanteriabano1negro.png';
                         borderSelectorColoresMarron.style.border='solid 0px rgb(0, 255, 0)';
                         borderSelectorColoresBlanco.style.border='solid 0px rgb(0, 255, 0)';
                         borderSelectorColoresNegro.style.border='solid 5px rgb(0, 255, 0)';
                     }else if(color==="rgb(255, 255, 255)"){ /*si es blanco*/
-                        document.getElementById('img').src='imagenes/baño/estanteriabaño1blanco.png';
+                        document.getElementById('img').src='imagenes/baño/estanteriabano1blanco.png';
                         borderSelectorColoresMarron.style.border='solid 0px rgb(0, 255, 0)';
                         borderSelectorColoresBlanco.style.border='solid 5px rgb(0, 255, 0)';
                         borderSelectorColoresNegro.style.border='solid 0px rgb(0, 255, 0)';
@@ -327,8 +327,8 @@ function ponerMueble() {
                         borderSelectorColoresNegro.style.border='solid 0px rgb(0, 255, 0)';
                     }
                     break;
-                case 'imagenes/cocina/mueblecondimentos1.png': /*españa*/
-                document.getElementById('nombre').innerText="Mueble de condimentos - España";
+                case 'imagenes/cocina/mueblecondimentos1.png': /*sazón*/
+                document.getElementById('nombre').innerText="Mueble de condimentos - Sazón";
                     if(color==="rgb(114, 57, 0)"){ /*si es marrón*/
                         document.getElementById('img').src='imagenes/cocina/mueblecondimentos1.png';
                         borderSelectorColoresMarron.style.border='solid 5px rgb(0, 255, 0)';
@@ -346,8 +346,8 @@ function ponerMueble() {
                         borderSelectorColoresNegro.style.border='solid 0px rgb(0, 255, 0)';
                     }
                     break;
-                case 'imagenes/cocina/despensa1.png': /*teléfono*/
-                document.getElementById('nombre').innerText="Despensa - Teléfono";
+                case 'imagenes/cocina/despensa1.png': /*búnker*/
+                document.getElementById('nombre').innerText="Despensa - Búnker";
                     if(color==="rgb(114, 57, 0)"){ /*si es marrón*/
                         document.getElementById('img').src='imagenes/cocina/despensa1.png';
                         borderSelectorColoresMarron.style.border='solid 5px rgb(0, 255, 0)';
@@ -425,7 +425,7 @@ function ponerInfo(){
             document.querySelector('.price').innerText='58.200₧';
             precio=58200;
             break;
-        case 'imagenes/baño/estanteriabaño1.png':
+        case 'imagenes/baño/estanteriabano1.png':
             document.querySelector('.price').innerText='102.400';
             precio=102400;
             break;
