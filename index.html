@@ -5,11 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        body{
-            background-color: rgb(47, 84, 124);
+        body {
+            height: 100%;
+            background-color: rgba(47, 84, 124, 0.8);
+            font-family: Yrsa;
+            margin: 0;
+            padding: 0;
         }
-        form{
-
+        .form-container {
+            background-color: rgb(147, 75, 7);
+            color: #fff;
+            border-radius: 15px;
+            max-width: 400px;
+            margin: 60px auto 40px auto;
+            padding: 30px;
+            text-align: center;
+        }
+        .form-container h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+        
+        .form-container p {
+            margin-top: 15px;
+            color: #ffdabf;
+        }
+        .form-container a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #2f547cce;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            font-size: 1.2em;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #ffdabf;
+            margin: 0 10px;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -25,4 +70,9 @@
         <p>¿No tienes una cuenta? <a href="registro.html">Regístrate Aquí</a></p>
     </div>
 </body>
+<footer>
+    <h4 class="footer">IQUEA. Nuestros Servicios:</h4><br>
+    <a href="manual.txt">Manual</a>
+    <a href="../imagenes/index.html">Imágenes</a>
+</footer>
 </html>
