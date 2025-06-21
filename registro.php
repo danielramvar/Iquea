@@ -24,9 +24,5 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
               </div>";
     }
 }else{
-?>
-<div class="form-container">
-    <h3>Por favor, completa los campos.</h3>
-    <br/><a href='registro.html'>Volver</a>
-</div>
-<?php } ?>
+
+}?>
